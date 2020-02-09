@@ -1,0 +1,13 @@
+.images-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+}
+.image-wrapper  {
+    padding: 4px;
+}
+.images-container img {
+    max-height: 130px;
+}

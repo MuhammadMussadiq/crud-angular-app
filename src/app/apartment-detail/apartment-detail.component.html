@@ -1,0 +1,28 @@
+
+<div class="alert alert-danger alert-dismissible" *ngIf="noDataFoundMsg">
+  <strong>Error!</strong> {{noDataFoundMsg}}
+  <button type="button" class="close" (click)="resetErrorAlert()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div style="margin: auto; width: 70%;" *ngIf="!noDataFoundMsg">
+
+  <div class="alert alert-primary" style="text-align: center;" role="alert">
+    <strong>Apartment Detail</strong> <span><a href="" class="btn btn-link btn-sm" [routerLink]="['/list']" 
+      style="margin-top: -4px; font-size: 12; text-decoration: underline;" >Go To List Page </a> </span>
+  </div> 
+
+  <strong>Address: </strong> {{apartment.address}}
+  <hr>
+  <strong>No Of Rooms: </strong> {{apartment.noOfRooms}}
+  <hr>
+  <strong>Description</strong>
+  <p>{{apartment.description}}</p>
+  <hr>
+  <div class="images-container mt-4">
+    <div *ngFor="let photo of photos;" class="image-wrapper">
+      <img [src]="photo" alt="photo" class="img-thumbnail">
+    </div>
+  </div>
+</div>

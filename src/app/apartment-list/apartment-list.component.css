@@ -1,0 +1,36 @@
+.card-layout {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.card-layout .card {
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.card-layout img {
+    height: 250px;
+    width: 300px;
+}
+
+.list-header {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+/* .list-header input{
+    flex-grow: 8;
+} */
+
+.add-btn-container {
+    display: flex;
+    width: 40%;
+    justify-content: flex-end;
+}
+
+.pagination-container {
+    width: 30%;
+    margin: auto;
+}

@@ -1,0 +1,29 @@
+
+
+<div class="container ">
+  <div class="alert alert-info" role="alert">
+    <h4 class="alert-heading">Information!</h4>
+    <b>Admin Credentials</b> (username: admin, password: admin) <br>
+  <b>Normal User Credentials</b> (username: user, password: user)
+    <hr>
+    <p class="mb-0">- Admin can do every available action in application <br>
+      - Normal user cannot do the delete apartment operation</p>
+  </div>
+  
+  <div class="alert alert-danger mr-auto ml-auto" style="width: 50%;" role="alert" *ngIf="failureMsg">
+    {{failureMsg}}
+  </div>
+  <form class="mr-auto ml-auto" style="width: 50%;" (ngSubmit)="authenticate()" #form=ngForm>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" ngModel
+        required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" name="password" placeholder="Password" ngModel required>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Login</button>
+  </form>
+</div>
